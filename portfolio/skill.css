@@ -1,0 +1,160 @@
+/* Skills Section */
+.skill-details{
+    width: 2vw;
+}
+#skills {
+    padding: 50px 20px;
+    text-align: center;
+    height: 60vh;
+    
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: 'Chicle', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: 36vh;
+    width: 45vw;
+}
+
+.skill {
+    text-align: left;
+}
+
+.skill h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color:#8AAAE5;
+}
+
+.skill-bar {
+    background-color: #e3fae9;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #0b6975; /* Customize the color */
+    height: 10px;
+    border-radius: 20px;
+}
+
+.progress::before {
+    content: '';
+    display: block;
+    height: 10px;
+}
+
+@media (min-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.container1{
+    position: absolute;
+    left: 15vw;
+    top: 14vh;
+}
+.heading1{
+    color: azure;
+}
+.radial-bars{
+    width: 100%;
+    display:flex;
+    flex-wrap:wrap ;
+    justify-content:space-evenly ;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar{
+width: 50%;
+height: 170px;
+margin-bottom: 10px;
+position: relative;
+}
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    transform: translate(-50%,-50%)rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stroke: rgb(255, 255, 255);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap:round ;
+    animation: animate-bar 1s linear forwards;
+}
+.percentage{
+    color: aliceblue;
+    margin-top: 10vw;
+}
+.text{
+    color: #e3fae9;
+    margin-top: 35%;
+
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+.path{
+    stroke-width: 10;
+    stroke: #0b6975;
+    fill:transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 2s linear forwards;
+}
+.path-1{animation: animate-path1 1s 1s linearforward;}
+.path-2{animation: animate-path1 1s 1s linearforward;}
+.path-3{animation: animate-path1 1s 1s linearforward;}
+.path-4{animation: animate-path1 1s 1s linearforward;}
+
+
+@keyframes animate-path1{
+     100%{
+stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path12{
+    100%{
+stroke-dashoffset: 175;
+    }
+}
+@keyframes animate-path1{
+    100%{
+stroke-dashoffset: 125;
+    }
+}
+@keyframes animate-path1{
+    100%{
+stroke-dashoffset: 77;
+    }
+}
+.radial-bar .percentage{
+    position: absolute;
+    bottom: 17%;
+    left: 47%;
+    transform: translate(-50,-50);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5 1s linear forwards;
+}
+
+
+  
